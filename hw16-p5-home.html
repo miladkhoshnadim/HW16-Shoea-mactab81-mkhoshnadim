@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mine peractice</title>
+    <link rel="stylesheet" href="hw16-MP.css" />
+    <!-- CSS only botstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="main">
+      <div class="pages" id="">
+        <div class="headP5">
+          <div class="headP5Left">
+            <div class="imageEccunt">
+              <img src="/accets/ecunt.png" />
+            </div>
+            <div class="acuntNameMor">
+              <span class="morning">Good Morning</span>
+              <span class="acuntName">Milad Khosh</span>
+            </div>
+          </div>
+          <div class="felex">
+            <img class="ball" src="/accets/Vector.png" alt="" />
+            <img class="heart" src="/accets/heart.png" alt="" />
+          </div>
+        </div>
+        <div>
+          <img class="imgSerch" src="/accets/searchicon.png" alt="" />
+          <input
+            type="text"
+            class="inputSearch"
+            id="searching"
+            placeholder="Searching"
+            onkeyup="SearchInputs(value)"
+          />
+        </div>
+        <section class="sectionIcons" id="marksIcon">
+          <div class="displayfelex margTop">
+            <div class="divIconP5" onclick="marck('Nike')">
+              <img
+                class="imageIcons margLeft"
+                src="/accets/nikeIcon.png"
+                alt=""
+              />
+              <span class="LabelIcons padin">Nike</span>
+            </div>
+            <div class="divIconP5" onclick="marck('Adidas')">
+              <img class="imageIcons" src="/accets/adidasIcon.png" alt="" />
+              <span class="LabelIcons">Adidas</span>
+            </div>
+            <div class="divIconP5" onclick="marck('Puma')">
+              <img class="imageIcons" src="/accets/pumaIcon.png" alt="" />
+              <span class="LabelIcons">Puma</span>
+            </div>
+            <div class="divIconP5" onclick="marck('Asics')">
+              <img class="imageIcons argRight" src="/accets/Asics.png" alt="" />
+              <span class="LabelIcons">Asics</span>
+            </div>
+          </div>
+          <div class="displayfelex margTop">
+            <div class="divIconP5" onclick="marck('Rebook')">
+              <img class="imageIcons margLeft" src="/accets/rebok.png" alt="" />
+              <span class="LabelIcons padin">Rebook</span>
+            </div>
+            <div class="divIconP5" onclick="marck('New Ba')">
+              <img class="imageIcons" src="/accets/nb.png" alt="" />
+              <span class="LabelIcons">New Ba</span>
+            </div>
+            <div class="divIconP5" onclick="marck('Convers')">
+              <img class="imageIcons" src="/accets/convers.png" alt="" />
+              <span class="LabelIcons">Convers</span>
+            </div>
+            <div class="divIconP5" onclick="marck('More')">
+              <img class="imageIcons argRight" src="/accets/more.png" alt="" />
+              <span class="LabelIcons">More</span>
+            </div>
+          </div>
+        </section>
+        <!---------------------------------------------- most papiular -->
+        <div class="margTop" id="SeeAll">
+          <span class="mostpopiolar">Most Papiular</span>
+          <span>See All</span>
+        </div>
+        <div class="divButtonsP4" id="buttens">
+          <button class="buttonSP4 activ">All</button>
+          <button class="buttonSP4">Nike</button>
+          <button class="buttonSP4">Adidas</button>
+          <button class="buttonSP4">Puma</button>
+          <button class="buttonSP4">Asica</button>
+          <button class="buttonSP4">PumaOrginal</button>
+          <button class="buttonSP4">AdidasChina</button>
+        </div>
+        <section class="sectionP5Main" id="P5MainSec">
+          <div class="displayfelex">
+            <div class="divImgShoseLeft">
+              <img class="ImgShosePruduvt" src="/accets/foma1.jpg" alt="" />
+              <span class="explanPruduct">Nike Wooden style</span>
+              <span class="price">$115.00</span>
+            </div>
+            <div class="felex">
+              <img class="ImgShosePruduvt" src="/accets/foma2.jpg" alt="" />
+              <span class="explanPruduct">Nike china style</span>
+              <span class="price">$90.00</span>
+            </div>
+          </div>
+          <div class="displayfelex">
+            <div class="divImgShoseLeft">
+              <img class="ImgShosePruduvt" src="/accets/foma1.jpg" alt="" />
+              <span class="explanPruduct">Nike Wooden style</span>
+              <span class="price">$115.00</span>
+            </div>
+            <div class="felex">
+              <img class="ImgShosePruduvt" src="/accets/foma2.jpg" alt="" />
+              <span class="explanPruduct">Nike china style</span>
+              <span class="price">$90.00</span>
+            </div>
+          </div>
+        </section>
+
+        <!------------------------------------------------------------- nav bar buttom page -->
+        <div class="displayfelex">
+          <div class="homeImage">
+            <img
+              class="imagehomeIcons"
+              src="/accets/house-door-fill.png"
+              alt=""
+            />
+            <span class="Labelhome">Home</span>
+          </div>
+          <div class="homeImage">
+            <a href="http://127.0.0.1:5500/hw16-p9-MyCart.html">
+              <img class="imagehomeIcons" src="/accets/bag.png" alt=""
+            /></a>
+            <span class="Labelhome">Cart</span>
+          </div>
+          <div class="homeImage">
+            <a href="http://127.0.0.1:5500/hw16-p14-myorder.html">
+              <img class="imagehomeIcons" src="/accets/cart2.png" alt=""
+            /></a>
+            <span class="Labelhome">Orders</span>
+          </div>
+          <div class="homeImage">
+            <img class="imagehomeIcons" src="/accets/wallet2.png" alt="" />
+            <span class="Labelhome">Wallet</span>
+          </div>
+          <div class="homeImage">
+            <img class="imagehomeIcons" src="/accets/person.png" alt="" />
+            <span class="Labelhome">Profile</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      document.getElementById("SeeAll").addEventListener("click", function () {
+        location.href = "http://127.0.0.1:5500/hw16-p6.html";
+      });
+
+      const TypeShose = document.getElementsByClassName("explanPruduct");
+      const P5MainSec = document.getElementById("P5MainSec");
+      const buttens = document.getElementById("buttens");
+
+      GeneratePruducts();
+      function GeneratePruducts(mark = "All") {
+        P5MainSec.innerHTML = ``;
+        fetch("http://localhost:3000/products")
+          .then((response) => response.json())
+          .then((data) => {
+            data.forEach((elem) => {
+              if (mark == "All") {
+                Generate(elem);
+              } else if (elem.label == mark) {
+                Generate(elem);
+              }
+            });
+          });
+      }
+
+      function Generate(element) {
+        P5MainSec.innerHTML += `<div id="${element.id}" class="displayfelex" onclick ="GoToTacProduct(${element.id})">
+                  <div class="divImgShoseLeft">
+                    <img class="ImgShosePruduvt" src="/accets/${element.image}" alt="" />
+                    <span id="explan${element.id}" class="explanPruduct">${element.Type}</span>
+                    <span class="price">${element.price}</span>
+                  </div>
+                  <div class="felex">
+                    <img class="ImgShosePruduvt" src="/accets/${element.image2}" alt="" />
+                    <span id="explan${element.id}" class="explanPruduct">${element.Type2}</span>
+                    <span class="price">${element.price}</span>
+                  </div>
+                </div>`;
+      }
+
+      buttens.addEventListener("click", function (e) {
+        const mark = e.target.innerHTML;
+
+        [...document.getElementsByClassName("buttonSP4")].forEach((elem) => {
+          elem.classList.remove("activ");
+        });
+        e.target.classList.add("activ");
+        if (mark == "All") {
+          GeneratePruducts(mark);
+        } else if (mark == "Nike") {
+          GeneratePruducts(mark);
+        } else if (mark == "Adidas") {
+          GeneratePruducts(mark);
+        } else if (mark == "Puma") {
+          GeneratePruducts(mark);
+        } else if (mark == "Asica") {
+          GeneratePruducts(mark);
+        } else if (mark == "PumaOrginal") {
+          GeneratePruducts(mark);
+        } else if (mark == "AdidasChina") {
+          GeneratePruducts(mark);
+        } else {
+          console.log("there ara an error in your buttens");
+        }
+      });
+
+      function marck(e) {
+        console.log("e.target", e);
+
+        sessionStorage.setItem("mark", e);
+        location.href = "http://127.0.0.1:5500/hw16-p7-marks.html";
+      }
+
+      function GoToTacProduct(id) {
+        console.log("id", id);
+        sessionStorage.setItem("IdTacPrudact", id);
+        location.href = "http://127.0.0.1:5500/hw16-p8-tacProduct.html";
+      }
+
+      function handelToMyCart() {
+        location.href = "http://127.0.0.1:5500/hw16-p9-MyCart.html";
+      }
+
+      function SearchInputs(inp) {
+        // P5MainSec.innerHTML =``;
+        // id = d.substring(11);
+        [...TypeShose].forEach((SpanType) => {
+          if (SpanType.innerHTML.toUpperCase().includes(inp.toUpperCase())) {
+            console.log("hiden", SpanType.id.substring(6));
+
+            // document
+            //   .getElementById(`${SpanType.id.substring(6)}`)
+            //   .classList.add("hiden");
+            document.getElementById(
+              `${SpanType.id.substring(6)}`
+            ).hidden = false;
+            // Generate(element)
+          } else {
+            console.log("show");
+            document.getElementById(
+              `${SpanType.id.substring(6)}`
+            ).hidden = true;
+            // document
+            //   .getElementById(`${SpanType.id.substring(6)}`)
+            //   .classList.remove("hiden");
+            // .style.display = '';
+          }
+        });
+        // console.log("!@#", inp);
+      }
+    </script>
+  </body>
+  <!-- <script src="hw16-MP.js"></script> -->
+</html>

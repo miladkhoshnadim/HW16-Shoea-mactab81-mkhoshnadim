@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mine peractice</title>
+    <link rel="stylesheet" href="hw16-MP.css" />
+    <!-- CSS only botstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="main">
+      <section class="pages positionFix">
+        <div class="headP10 displayfelex">
+          <div>
+            <a href="http://127.0.0.1:5500/hw16-p10-chechOut.html">
+              <img src="/accets/Vectorleft.png" class="imageLeftP6" />
+            </a>
+          </div>
+          <span class="subjectP11">Payment Methods</span>
+          <i class="bi bi-plus-square PlusIcon"></i>
+        </div>
+
+        <p class="SelectPayment">Select the Payment Method you want to use.</p>
+
+        <div class="DivPaymentP13">
+          <div class="ImageWalletP13">
+            <img width="40px" src="/accets/icons8-wallet-60.png" alt="" />
+          </div>
+
+          <div class="MyWalletCharacter">My Wallet</div>
+
+          <div class="priceWallet">$57.142</div>
+          <input class="inputRedioPay" name="Payment" type="radio" />
+        </div>
+
+        <div class="DivPaymentP13">
+          <div class="ImageWalletP13">
+            <img width="40px" src="/accets/icons8-paypal-48.png" alt="" />
+          </div>
+
+          <div class="PayPalCharacter">Pay Pal</div>
+
+          <input class="inputRedioPay" name="Payment" type="radio" />
+        </div>
+
+        <div class="DivPaymentP13">
+          <div class="ImageWalletP13">
+            <img width="40px" src="/accets/icons8-google-48.png" alt="" />
+          </div>
+
+          <div class="PayPalCharacter">Google Pay</div>
+
+          <input class="inputRedioPay" name="Payment" type="radio" />
+        </div>
+
+        <div class="DivPaymentP13">
+          <div class="ImageWalletP13">
+            <img width="40px" src="/accets/icons8-apple-logo-50.png" alt="" />
+          </div>
+
+          <div class="PayPalCharacter">Apple Pay</div>
+
+          <input class="inputRedioPay" name="Payment" type="radio" />
+        </div>
+
+        <div class="DivPaymentP13">
+          <div class="ImageWalletP13">
+            <img
+              width="40px"
+              src="/accets/icons8-mastercard-logo-48.png"
+              alt=""
+            />
+          </div>
+
+          <div class="PayPalCharacter">.... .... .... .... 4679</div>
+
+          <input class="inputRedioPay" name="Payment" type="radio" />
+        </div>
+
+        <div class="DivConfirm">
+          <button class="ButtonCountinuoPay" id="ConfirmPayment">
+            Confirm Payment
+          </button>
+        </div>
+      </section>
+
+      <section class="pages PageDeletP9Back hiden" id="Layer2P13">
+        <div class="sectionSuccess">
+          <div class="divImageSuccess">
+            <img
+              src="/accets/IconSuccessfull.png"
+              class="imageSuccess"
+              alt=""
+            />
+          </div>
+
+          <div class="SuccessfullCharacter">Order Successfull</div>
+          <div class="MadeOrderCharacter">
+            you have successfully made order.
+          </div>
+          <div class="MadeOrderCharacter">
+            <button class="ButtonViweOrder">Viwe order</button>
+          </div>
+          <div class="MadeOrderCharacter">
+            <button class="ButtonViweOrder">Viwe E-Recipt</button>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="pages PageSuccessfullP13 " id="Layer3P13"> -->
+      <div class="sectionSuccess hiden" id="Layer3P13">
+        <div class="divImageSuccess">
+          <img src="/accets/IconSuccessfull.png" class="imageSuccess" alt="" />
+        </div>
+
+        <div class="SuccessfullCharacter">Order Successfull</div>
+        <div class="MadeOrderCharacter">you have successfully made order.</div>
+        <div class="MadeOrderCharacter">
+          <button class="ButtonViweOrder" id="Viwe-order">Viwe order</button>
+        </div>
+        <div class="MadeOrderCharacter">
+          <button class="ButtonViweOrder" id="Viwe-E-Recipt">
+            Viwe E-Recipt
+          </button>
+        </div>
+      </div>
+      <!-- </section> -->
+    </main>
+
+    <script>
+      const ConfirmPayment = document.getElementById("ConfirmPayment");
+      const Layer2P13 = document.getElementById("Layer2P13");
+      const Layer3P13 = document.getElementById("Layer3P13");
+      const Viweorder = document.getElementById("Viwe-order");
+      const ViweERecipt = document.getElementById("Viwe-E-Recipt");
+
+      ConfirmPayment.addEventListener("click", function () {
+        // console.log("!@#");
+        Layer2P13.classList.remove("hiden");
+        Layer3P13.classList.remove("hiden");
+        setTimeout(() => {
+          Layer3P13.classList.add("opacity");
+        }, 0);
+
+        setTimeout(() => {
+          fetch(`http://localhost:3000/MyCart`)
+          .then((response) => response.json())
+          .then((data) => {
+            data.forEach((objj) => {
+              postToMyOrder(objj);
+              fetch(`http://localhost:3000/MyCart/${objj.id}`, { method: 'DELETE' })
+            });
+          });
+        }, 2500);
+
+      });
+
+      const modal = document.querySelector(".PageDeletP9Back");
+
+      Viweorder.addEventListener("click", function () {
+        removeSuccessfull();
+        setTimeout(() => {
+          location.href = "http://127.0.0.1:5500/hw16-p14-myorder.html";
+        }, "1800");
+      });
+
+      ViweERecipt.addEventListener("click", function () {
+        alert(
+          "انشالله در آینده قسمت رسید و پرداخت تکمیل و از همین طریق ارائه خواهد شد. و من الله توفیق..."
+        );
+        removeSuccessfull();
+      });
+
+      window.onclick = function (e) {
+        if (e.target == modal) {
+          removeSuccessfull();
+        }
+      };
+
+      function removeSuccessfull() {
+        document.getElementById(`Layer3P13`).classList.remove("opacity");
+        setTimeout(() => {
+          Layer2P13.classList.add("hiden");
+          Layer3P13.classList.add("hiden");
+        }, "1800");
+      }
+
+      function postToMyOrder(obj) {
+        fetch("http://localhost:3000/ActiveOrder", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            image: `${obj.image}`,
+            size: `${obj.size}`,
+            color: `${obj.color}`,
+            price: `${obj.price}`,
+            Type: `${obj.Type}`,
+            conter: `${obj.conter}`,
+          }),
+        });
+      }
+    </script>
+  </body>
+</html>

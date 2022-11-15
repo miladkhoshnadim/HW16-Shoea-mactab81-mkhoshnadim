@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "milad",
+      "email": "milad@gmail.com",
+      "password": "milad1900",
+      "adres": "tehran"
+    },
+    {
+      "id": 2,
+      "name": "nima",
+      "email": "nima@gmail.com",
+      "password": "nima1372",
+      "adres": "tehran-karaj"
+    }
+  ],
+  "products": [
+    {
+        "id":1,
+        "cod":10001,
+        "label":"nike",
+        "price":"$90.00"
+    },
+    {
+      "id":2,
+      "cod":10002,
+      "label":"nike",
+      "price":"$101.00"
+  }
+  ]
+}

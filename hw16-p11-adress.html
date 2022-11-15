@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mine peractice</title>
+    <link rel="stylesheet" href="hw16-MP.css" />
+    <!-- CSS only botstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="main">
+      <section class="pages">
+        <div class="headP10">
+          <a href="http://127.0.0.1:5500/hw16-p10-chechOut.html">
+            <img src="/accets/Vectorleft.png" class="imageLeftP6" />
+          </a>
+          <span class="subjectP11">Shipping Addres</span>
+        </div>
+        <section class="MainP10">
+          <div id="AdressList">
+            <div class="DivShipping">
+              <img
+                class="ImageLocationP10"
+                src="/accets/icons8-location-64.png"
+                alt=""
+              />
+              <div class="discriptionAddres">
+                <div class="discriptionCharacter">Home</div>
+                <span class="divAdress">Tehran-Navab-EmamKhomeine-Rodacy </span>
+              </div>
+              <input class="ImageEditP10" type="radio" />
+            </div>
+          </div>
+          <button
+            class="ButtonCountinuoPay ButtonAddNewAddress"
+            id="AddNewAddress"
+          >
+            Add New Address
+          </button>
+        </section>
+        <button class="ButtonCountinuoPay" id="AplayAdress">Applay</button>
+      </section>
+    </main>
+
+    <script>
+      const AdressList = document.getElementById("AdressList");
+      const AddNewAddress = document.getElementById("AddNewAddress");
+      const AplayAdress = document.getElementById("AplayAdress");
+
+      AdressList.innerHTML = ``;
+      fetch(`http://localhost:3000/Address`)
+        .then((response) => response.json())
+        .then((data) => {
+          data.forEach((e) => {
+            AdressList.innerHTML += ` <div class="DivShipping">
+              <img
+                class="ImageLocationP10"
+                src="/accets/icons8-location-64.png"
+                alt=""
+              />
+              <div class="discriptionAddres">
+                <div class="discriptionCharacter" id="NameAdres${e.id}">${e.name}</div>
+                <span class="divAdress" id="Adress${e.id}">${e.adres} </span>
+              </div>
+              <input class="ImageEditP10" id="radioInput${e.id}" type="radio" name="adresss" checked />
+            </div>`;
+          });
+        });
+
+      AddNewAddress.addEventListener("click", function () {
+        const name = prompt("Please inter NAME your Address...");
+        const adres = prompt("Please inter Address...");
+        AdressList.innerHTML += `<div class="DivShipping">
+              <img
+                class="ImageLocationP10"
+                src="/accets/icons8-location-64.png"
+                alt=""
+              />
+              <div class="discriptionAddres">
+                <div class="discriptionCharacter">${name}</div>
+                <span class="divAdress">${adres} </span>
+              </div>
+              <input class="ImageEditP10" type="radio" name="adresss" checked/>
+            </div>`;
+
+        fetch("http://localhost:3000/Address", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: `${name}`,
+            adres: `${adres}`,
+          }),
+        });
+      });
+
+      //////////////////////////////////// handel aplay adress//////////////////
+
+      AplayAdress.addEventListener("click", function () {
+        // console.log('!@#', [...document.querySelectorAll(".ImageEditP10")]);
+        [...document.querySelectorAll(".ImageEditP10")].forEach((tag) => {
+          // console.log("!@#id", tag.id);
+          if (tag.checked == true) {
+            // console.log("!@#id", tag.id.substring(10));
+            const nameAdress = document.getElementById(`NameAdres${tag.id.substring(10)}`).innerHTML
+            const mainAdress = document.getElementById(`Adress${tag.id.substring(10)}`).innerHTML
+            const location = {name:`${nameAdress}`,Adres:`${mainAdress}`}
+            // console.log("!@#id", nameAdress,mainAdress,location);
+            window.localStorage.setItem("Adres", JSON.stringify(location));
+          }
+        });
+        
+        location.href = "http://127.0.0.1:5500/hw16-p10-chechOut.html";
+      });
+    </script>
+  </body>
+</html>

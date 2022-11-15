@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mine peractice</title>
+    <link rel="stylesheet" href="hw16-MP.css" />
+    <!-- CSS only botstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="main">
+      <section class="pages">
+        <div class="headP6Most">
+          <a href="http://127.0.0.1:5500/hw16-p5-home.html">
+            <img src="/accets/Vectorleft.png" class="imageLeftP6" />
+          </a>
+          <span class="wishlist">Most Popular</span>
+        </div>
+        <!-- <div class="felex imageSearch">
+            <img src="/accets/search.png" class="imageLeftP4" alt="" />
+          </div> -->
+
+        <!-- <input type="text" class="hiden" id="search" /> -->
+        <div class="divButtonsP4" id="buttens">
+          <button id="All" class="buttonSP4 activ">All</button>
+          <button id="nike" class="buttonSP4">Nike</button>
+          <button id="adidas" class="buttonSP4">Adidas</button>
+          <button id="adidas" class="buttonSP4">Puma</button>
+          <button class="buttonSP4">Asica</button>
+          <button class="buttonSP4">PumaOrginal</button>
+          <button class="buttonSP4">AdidasChina</button>
+        </div>
+        <section class="sectionP6Main" id="P6MainSec">
+          <div class="displayfelex">
+            <div class="divImgShoseLeft">
+              <img class="ImgShosePruduvt" src="/accets/foma1.jpg" alt="" />
+              <span class="explanPruduct">Nike Wooden style</span>
+              <span class="price">$115.00</span>
+            </div>
+            <div class="felex">
+              <img class="ImgShosePruduvt" src="/accets/foma2.jpg" alt="" />
+              <span class="explanPruduct">Nike china style</span>
+              <span class="price">$90.00</span>
+            </div>
+          </div>
+          <div class="displayfelex">
+            <div class="divImgShoseLeft">
+              <img class="ImgShosePruduvt" src="/accets/foma1.jpg" alt="" />
+              <span class="explanPruduct">Nike Wooden style</span>
+              <span class="price">$115.00</span>
+            </div>
+            <div class="felex">
+              <img class="ImgShosePruduvt" src="/accets/foma2.jpg" alt="" />
+              <span class="explanPruduct">Nike china style</span>
+              <span class="price">$90.00</span>
+            </div>
+          </div>
+          <div class="displayfelex">
+            <div class="divImgShoseLeft">
+              <img class="ImgShosePruduvt" src="/accets/foma1.jpg" alt="" />
+              <span class="explanPruduct">Nike Wooden style</span>
+              <span class="price">$115.00</span>
+            </div>
+            <div class="felex">
+              <img class="ImgShosePruduvt" src="/accets/foma2.jpg" alt="" />
+              <span class="explanPruduct">Nike china style</span>
+              <span class="price">$90.00</span>
+            </div>
+          </div>
+          <div class="displayfelex">
+            <div class="divImgShoseLeft">
+              <img class="ImgShosePruduvt" src="/accets/foma1.jpg" alt="" />
+              <span class="explanPruduct">Nike Wooden style</span>
+              <span class="price">$115.00</span>
+            </div>
+            <div class="felex">
+              <img class="ImgShosePruduvt" src="/accets/foma2.jpg" alt="" />
+              <span class="explanPruduct">Nike china style</span>
+              <span class="price">$90.00</span>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script>
+      const P6MainSec = document.getElementById("P6MainSec");
+      const buttens = document.getElementById("buttens");
+
+      GeneratePruducts();
+      function GeneratePruducts(mark = "All") {
+        P6MainSec.innerHTML = ``;
+        fetch("http://localhost:3000/products")
+          .then((response) => response.json())
+          .then((data) => {
+            data.forEach((elem) => {
+              if (mark == "All") {
+                Generate(elem);
+              } else if (elem.label == mark) {
+                Generate(elem);
+              } 
+            });
+          });
+      }
+
+      function Generate(element) {
+        P6MainSec.innerHTML += `<div class="displayfelex" onclick ="GoToTacProduct(${element.id})">
+            <div class="divImgShoseLeft">
+              <img class="ImgShosePruduvt" src="/accets/${element.image}" alt="" />
+              <span class="explanPruduct">${element.Type}</span>
+              <span class="price">${element.price}</span>
+            </div>
+            <div class="felex">
+              <img class="ImgShosePruduvt" src="/accets/${element.image2}" alt="" />
+              <span class="explanPruduct">${element.Type2}</span>
+              <span class="price">${element.price}</span>
+            </div>
+          </div>`;
+      }
+
+      buttens.addEventListener("click", function (e) {
+        const mark = e.target.innerHTML;
+        
+        [...document.getElementsByClassName('buttonSP4')].forEach((elem)=>{
+          elem.classList.remove('activ')
+        });
+        e.target.classList.add('activ');
+        if (mark == "All") {
+          GeneratePruducts(mark);
+        } else if (mark == "Nike") {
+          GeneratePruducts(mark);
+        } else if (mark == "Adidas") {
+          GeneratePruducts(mark);
+        } else if (mark == "Puma") {
+          GeneratePruducts(mark);
+        } else if (mark == "Asica") {
+          GeneratePruducts(mark);
+        } else if (mark == "PumaOrginal") {
+          GeneratePruducts(mark);
+        } else if (mark == "AdidasChina") {
+          GeneratePruducts(mark);
+        } else {
+          console.log("there ara an error in your buttens");
+        }
+      });
+
+      function GoToTacProduct(id) {
+        console.log("id", id);
+        sessionStorage.setItem("IdTacPrudact", id);
+        location.href = "http://127.0.0.1:5500/hw16-p8-tacProduct.html";
+      }
+      // data.forEach((element,i) => {
+      //   if(element.email == emailInput.value && element.password == password.value){
+      //     console.log(data);
+      //     location.href="http://127.0.0.1:5500/hw16-p5-home.html";
+      //   }else if (i == data.length-1){
+      //     emailInput.classList.add('error');
+      //     password.classList.add('error');
+      //     console.log('!@# not fund' )
+      //   }
+      // });
+    </script>
+  </body>
+  <!-- <script src="hw16-MP.js"></script> -->
+</html>

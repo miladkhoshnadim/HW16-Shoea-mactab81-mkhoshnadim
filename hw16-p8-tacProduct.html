@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mine peractice</title>
+    <link rel="stylesheet" href="hw16-MP.css" />
+    <!-- CSS only botstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="main">
+      <section class="pages">
+        <div class="headP6Most">
+          <a href="http://127.0.0.1:5500/hw16-p5-home.html">
+            <img src="/accets/Vectorleft.png" class="imageLeftP6" />
+          </a>
+        </div>
+
+        <section class="tacProductsection">
+          <div class="divimgTacProduct" id="divImgTacProduct">
+            <img class="imgTacProduct" src="/accets/Rectangle 7.png" alt="" />
+            <img
+              class="imgTacProduct hiden"
+              src="/accets/Rectangle 7.png"
+              alt=""
+            />
+            <img
+              class="imgTacProduct hiden"
+              src="/accets/Rectangle 7.png"
+              alt=""
+            />
+          </div>
+
+          <div class="divpaginatinP8">
+            <button
+              onclick="paginationP8(id)"
+              id="paginationP8-P1"
+              class="paginatinP3 activ"
+            ></button
+            ><button
+              onclick="paginationP8(id)"
+              class="paginatinP3"
+              id="paginationP8-P2"
+            ></button
+            ><button
+              onclick="paginationP8(id)"
+              class="paginatinP3"
+              id="paginationP8-P3"
+            ></button>
+          </div>
+
+          <div class="divExplainProduct">
+            <span class="headTacPrudoct" id="discription"
+              >Air Jordann 3 Retro</span
+            >
+            <p class="paragrafTacProduct" id="ParagrafTacProduct">
+              A shoe is an item of footwear intended to protect and comfort the
+              human foot. They are
+              <strong class="moreInformation" id="MoreInformation"
+                >Viwe More ... </strong
+              >often worn with a sock. Shoes are also used as an item of
+              decoration
+            </p>
+            <div class="displayfelex">
+              <div class="felex">
+                <div class="SizeSpan">Size</div>
+                <div id="SizeSpann">
+                  <span class="sizeNumber active">40</span>
+                  <span class="sizeNumber">42</span>
+                  <span class="sizeNumber">44</span>
+                </div>
+              </div>
+              <div class="felex">
+                <div class="SizeSpan">Color</div>
+                <div id="ColorSpann">
+                  <span class="sizeNumber backColor1" id="white"></span>
+                  <span class="sizeNumber backColor2" id="blue"></span>
+                  <span
+                    class="sizeNumber backColor3 borderActive"
+                    id="red"
+                  ></span>
+                  <span class="sizeNumber backColor4" id="black"></span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label class="quantitySpan">Quantity</label>
+              <span class="divQuantity"
+                ><span id="minesCunter" class="minesPlas"> - </span
+                ><span id="cunter" class="minesPlas"> 0 </span
+                ><span id="pluseCunter" class="minesPlas"> + </span></span
+              >
+            </div>
+            <div class="displayfelex">
+              <div id="TotalpriceP8" class="felex">
+                <!-- <span class="TotalpriceP8">Total Price</span>
+                <span class="priceSpanP8">$98.00</span> -->
+              </div>
+              <button id="AddToCartP8" class="AddToCartP8">Add to Cart</button>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script>
+      const id = sessionStorage.getItem("IdTacPrudact");
+      const divImgTacProduct = document.getElementById("divImgTacProduct");
+      const TotalpriceP8 = document.getElementById("TotalpriceP8");
+      const discription = document.getElementById("discription");
+      const MoreInformation = document.getElementById("MoreInformation");
+      const ParagrafTacProduct = document.getElementById("ParagrafTacProduct");
+      const SizeSpann = document.getElementById("SizeSpann");
+      const sizeNumber = document.getElementsByClassName("sizeNumber");
+      const ColorSpann = document.getElementById("ColorSpann");
+      const minesCunter = document.getElementById("minesCunter");
+      const pluseCunter = document.getElementById("pluseCunter");
+      const AddToCartP8 = document.getElementById("AddToCartP8");
+      const cunter = document.getElementById("cunter");
+
+
+      let counter = 0;
+      let img = "";
+      let size = 42;
+      let type = "";
+      let color = "red";
+      let price = "";
+      console.log("IdTacPrudact", id);
+
+      divImgTacProduct.innerHTML = ``;
+      fetch(`http://localhost:3000/products/${id}`)
+        .then((response) => response.json())
+        .then((data) => {
+          price = `${data.price}`;
+          discription.innerHTML = `${data.Type}`;
+          TotalpriceP8.innerHTML = `<span class="TotalpriceP8">Total Price</span>
+                <span id="PP1" class="priceSpanP8">$0.00</span>
+              `;
+          divImgTacProduct.innerHTML = `<img id="P1" class="imgTacProduct" src="/accets/${data.image}" alt="" />
+            <img id="P2" class="imgTacProduct hiden" src="/accets/${data.image2}" alt="" />
+            <img id="P3" class="imgTacProduct hiden" src="/accets/${data.image}" alt="" />`;
+        });
+
+      function paginationP8(id) {
+        [...document.getElementsByClassName("paginatinP3")].forEach((elem) => {
+          elem.classList.remove("activ");
+        });
+        document.getElementById(`${id}`).classList.add("activ");
+        [...document.getElementsByClassName("imgTacProduct")].forEach(
+          (elem) => {
+            elem.classList.add("hiden");
+          }
+        );
+        document.getElementById(`${id.slice(-2)}`).classList.remove("hiden");
+      }
+
+      MoreInformation.addEventListener("click", function () {
+        ParagrafTacProduct.classList.toggle("hight");
+      });
+
+      SizeSpann.addEventListener("click", function (e) {
+        [...sizeNumber].forEach((elem) => {
+          elem.classList.remove("active");
+        });
+        e.target.classList.toggle("active");
+      });
+
+      ColorSpann.addEventListener("click", function (e) {
+        [...sizeNumber].forEach((elem) => {
+          elem.classList.remove("borderActive");
+        });
+        e.target.classList.toggle("borderActive");
+      });
+
+      minesCunter.addEventListener("click", function () {
+        if (counter > 0) {
+          --counter;
+        }
+        handelCunter();
+      });
+
+      pluseCunter.addEventListener("click", function () {
+        ++counter;
+        handelCunter();
+      });
+
+      function handelCunter() {
+       cunter.innerHTML = `${counter}`;
+        document.getElementById("PP1").innerHTML = `$${
+          counter * price.substring(1)
+        }.00`;
+      }
+
+      AddToCartP8.addEventListener("click", function () {
+        img = document.getElementById("P1").getAttribute("src");
+        size = document.querySelector(".active").innerHTML;
+        type = discription.innerHTML;
+        color = document.querySelector(".borderActive").getAttribute("id");
+        // price = document.getElementById("PP1").innerHTML;
+        if (counter == 0) {
+          alert("The minimum order must be one. Please select the Quantity ");
+        } else {
+          console.log("!@#", img, size, type, color, price, counter);
+          fetch("http://localhost:3000/MyCart", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              image: `${img}`,
+              size: `${size}`,
+              color: `${color}`,
+              price: `${price}`,
+              Type: `${type}`,
+              conter: `${counter}`,
+            }),
+          });
+          location.href = "http://127.0.0.1:5500/hw16-p9-MyCart.html";
+        }
+      });
+    </script>
+  </body>
+  <!-- <script src="hw16-MP.js"></script> -->
+</html>

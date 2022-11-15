@@ -1,0 +1,1283 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+.main {
+  max-width: 428px;
+  background-color: rgb(227, 243, 238);
+  border: 1px solid rgb(114, 105, 105);
+  margin: 0px auto;
+  height: 926px;
+}
+
+.pages {
+  max-width: 428px;
+  background-color: hwb(200 96% 3%);
+  height: 923px;
+  margin: 0px auto;
+  font-family: arial;
+}
+
+.hiden {
+  display: none;
+}
+
+.displayfelex {
+  display: flex;
+}
+
+.felex {
+  flex: 1;
+}
+
+/******************** page 1 *************/
+.divpage1 {
+  padding: 392px 98px 0px 99px;
+  display: flex;
+}
+
+.div2page1 {
+  flex: 1;
+  padding-top: 9px;
+  background-color: black;
+  border-radius: 40px;
+  text-align: center;
+}
+
+/* .imgShoea {
+  border-radius: 30px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+} */
+
+.headShoea {
+  flex: 1;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 63px;
+  margin-left: 12px;
+}
+
+.loding {
+  margin: 306px 190px 0px;
+}
+
+/******************* page 2 *****/
+
+.page2 {
+  background-image: url("/accets/Wallpaper.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/accets/Wallpaper.png");
+  /* padding: 20px; */
+  opacity: 4;
+  color: #ffff;
+}
+
+.wellcome {
+  font-weight: bold;
+  font-size: 36px;
+  padding: 639px 115px 0px 32px;
+}
+
+.shoeaP2 {
+  font-weight: bold;
+  font-size: 75px;
+  margin: 16px 174px 0px 32px;
+}
+
+.introduceP2 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  padding: 28px 32px 0px;
+}
+
+/***************** page 3******/
+
+.image1P3 {
+  width: 425px;
+  height: 637px;
+}
+
+.massageP3 {
+  margin: 28px 24px 0px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;
+  color: #000000;
+}
+
+.buttonP3 {
+  margin: 40px 20px 0px;
+  border-radius: 25px;
+  color: aliceblue;
+  cursor: pointer;
+  font-size: 14px;
+  width: 380px;
+  height: 47px;
+  background: #212529;
+  border: 1px solid #212529;
+  border-radius: 30px;
+}
+
+.paginatinP3 {
+  width: 23px;
+  background-color: rgb(174, 173, 175);
+  margin: 5px;
+  border: none;
+  height: 3px;
+}
+
+.divpaginatinP3 {
+  margin: 42px 163px 0px;
+  text-align: center;
+}
+
+.divpaginatinP3-3 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.activ {
+  background-color: rgb(47, 44, 49);
+  color: aliceblue;
+}
+
+.active {
+  background-color: rgb(47, 44, 49);
+  color: aliceblue;
+}
+
+.baseTransition {
+  position: relative;
+  right: 0;
+  transition: right 1s;
+}
+
+.transition {
+  right: 425px;
+}
+
+.baseTransitionToRight {
+  position: relative;
+  right: 425px;
+  transition: right 1s;
+}
+
+.transitionToRight {
+  right: 0px;
+}
+
+/***************** page 4******/
+
+.imgLogin {
+  padding: 122px 187px 118px;
+}
+
+.maassageLogin {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #152536;
+  padding: 0px 40px 38px 38px;
+}
+
+.divInputuser {
+  padding: 0 24px 10px;
+}
+
+.inpuutUser {
+  height: 37px;
+  width: 380px;
+  padding-left: 30px;
+}
+
+.remember {
+  padding: 19px 149px 270px;
+}
+
+.LoginButt {
+  width: 380px;
+  height: 47px;
+  background: #212529;
+  opacity: 0.65;
+  border: 1px solid #212529;
+  border-radius: 30px;
+  margin: 0px 24px;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.emailEmg {
+  position: relative;
+  left: 10px;
+  top: 29px;
+}
+
+.eyeIcon {
+  position: relative;
+  left: 340px;
+  top: 29px;
+}
+
+.opacity {
+  opacity: 1;
+}
+
+.error {
+  border: 2px solid rgb(238, 88, 88);
+}
+
+/***************** page 5******/
+
+.headP5 {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.imageEccunt {
+  flex: 1;
+  padding: 16px 16px 16px 24px;
+}
+
+.headP5Left {
+  display: flex;
+  flex: 1;
+}
+
+.acuntNameMor {
+  flex: 3;
+  padding: 16px 0px 10px;
+}
+
+.morning {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #757475;
+}
+
+.acuntName {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #152536;
+}
+
+.ball {
+  padding: 32px 16px 0px 122px;
+}
+
+.heart {
+  padding-top: 32px;
+}
+
+.inputSearch {
+  padding-left: 30px;
+  width: 380px;
+  height: 37px;
+  border-radius: 4px;
+  border: none;
+}
+
+.imgSerch {
+  position: relative;
+  left: 30px;
+}
+
+.sectionIcons {
+  margin: 10px 0px;
+}
+
+.imageIcons {
+  padding: 19px 15px;
+  border-radius: 30px;
+  background: #ececec;
+  margin: 12px 20px 13px;
+}
+
+.margTop {
+  margin: 0px 0px 18px 0px;
+  cursor: pointer;
+}
+
+.divIconP5 {
+  flex: 1;
+}
+
+.margLeft {
+  margin: 12px 20px 13px 32px;
+}
+
+.margRight {
+  margin: 12px 32px 13px 20px;
+}
+
+.LabelIcons {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.05em;
+  color: #152536;
+  margin-left: 30px;
+}
+
+.padin {
+  padding-left: 15px;
+}
+
+.mostpopiolar {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  align-items: center;
+  color: #152536;
+  margin: 16px 195px 20px 24px;
+}
+
+.divButtonsP4 {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 70px;
+  padding-bottom: 0px;
+}
+
+.divButtonsP4::-webkit-scrollbar {
+  width: 0;
+}
+
+.buttonSP4 {
+  margin: 0px 7px;
+  padding: 10px 18px;
+  text-align: center;
+  border-radius: 25px;
+  border: 1px solid rgb(53, 51, 51);
+  cursor: pointer;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.ImgShosePruduvt {
+  width: 182px;
+  height: 182px;
+  background: #f3f3f3;
+  border-radius: 24px;
+}
+
+.divImgShoseLeft {
+  margin: 0px 16px 24px 0px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionP5Main {
+  padding: 24px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  white-space: nowrap;
+  height: 355px;
+  /* width: 228px; */
+}
+
+.sectionP5Main::-webkit-scrollbar {
+  width: 0;
+}
+
+.explanPruduct {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  align-items: center;
+  letter-spacing: -0.04em;
+  color: #152536;
+  display: block;
+  margin: 12px 0px 8px;
+}
+
+.price {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #152536;
+  display: block;
+}
+
+.homeImage {
+  margin: 12px 0px 0px 28px;
+  flex: 1;
+}
+
+.imagehomeIcons {
+  margin: 0px 22px 2px 0px;
+}
+
+.Labelhome {
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.04em;
+  color: #152536;
+}
+
+/*************************** page 6******/
+
+.headP6Most {
+  padding: 12px;
+}
+
+.imageLeftP6 {
+  padding: 12px;
+}
+
+.wishlist {
+  padding: 12px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  align-items: center;
+  color: #152536;
+}
+
+.sectionP6Main {
+  padding: 24px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  white-space: nowrap;
+  height: 755px;
+}
+
+.sectionP6Main::-webkit-scrollbar {
+  width: 0;
+}
+
+/*************************** page 8******/
+
+.imgTacProduct {
+  margin: 0px 40px;
+  width: 348px;
+  height: 230px;
+}
+
+.divpaginatinP8 {
+  margin: 89px 163px 0px;
+  text-align: center;
+}
+
+.divExplainProduct {
+  margin: 24px;
+}
+
+.headTacPrudoct {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  display: flex;
+  align-items: center;
+  color: #152536;
+  margin: 28px 0px;
+}
+
+.paragrafTacProduct {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #68717a;
+  overflow-y: hidden;
+  /* white-space: nowrap; */
+  height: 40px;
+}
+
+.hight {
+  height: 75px;
+}
+
+.moreInformation {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  color: #152536;
+  cursor: pointer;
+}
+
+.SizeSpan {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  align-items: center;
+  color: #152536;
+  margin: 34px 0px 18px;
+}
+
+.sizeNumber {
+  border: 1px solid rgb(139, 132, 230);
+  border-radius: 25px;
+  padding: 12px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+.backColor1 {
+  background-color: white;
+  padding: 12px 21px;
+}
+
+.backColor2 {
+  background-color: blue;
+  padding: 12px 21px;
+}
+
+.backColor3 {
+  background-color: red;
+  padding: 12px 21px;
+}
+
+.backColor4 {
+  background-color: black;
+  padding: 12px 21px;
+}
+
+.borderActive {
+  border: 10px solid rgb(64, 221, 25);
+}
+
+.divQuantity {
+  background-color: #d1e5eb;
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.minesPlas {
+  cursor: pointer;
+  margin: 20px;
+}
+
+.quantitySpan {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  align-items: center;
+  color: #152536;
+  margin: 64px 20px 58px 0px;
+}
+
+.priceSpanP8 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.TotalpriceP8 {
+  font-size: 12px;
+  display: block;
+}
+
+.AddToCartP8 {
+  border: none;
+  border-radius: 36px;
+  background-color: #000000;
+  color: #d1e5eb;
+  text-align: center;
+  width: 250px;
+  height: 70px;
+}
+
+/******************************************* page 9*******************/
+
+.imageLogoP9 {
+  width: 25px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.headP9 {
+  padding: 25px 20px;
+}
+
+.subjectP9 {
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 39px;
+  color: #152536;
+  padding: 0px 10px;
+}
+
+.anOrder {
+  display: flex;
+  border-radius: 15px;
+  background-color: rgb(243, 238, 212);
+  padding: 10px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.imageSearchP9 {
+  width: 50px;
+  margin-left: 180px;
+}
+
+.MainMyCart {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  white-space: nowrap;
+  height: 660px;
+  padding: 0px 20px;
+}
+
+.MainMyCart::-webkit-scrollbar {
+  width: 0;
+}
+
+.ImageProductP9 {
+  flex: 1;
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;
+}
+
+.discriptionOrder {
+  flex: 2;
+}
+
+.CheckOutDiv {
+  display: flex;
+  margin: 10px 15px;
+}
+
+.imageTrash {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 350px;
+}
+
+.discriptionCharacter {
+  font-weight: 700;
+  font-size: 19px;
+  margin-left: 15px;
+}
+
+.divSizeColor {
+  margin: 20px 0px 0px 15px;
+  color: #757475;
+}
+
+.DivPriceQuntityP9 {
+  margin: 20px 0px 0px 15px;
+}
+
+.PriceP9 {
+  font-weight: 600;
+  font-size: 21px;
+  /* margin-right: 40px; */
+}
+
+.colorSignP9 {
+  padding: 5px 14px;
+  background-color: #000000;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+
+.divQuantityP9 {
+  background-color: #d1e5eb;
+  border-radius: 25px;
+  padding: 3px 5px;
+  font-weight: 600;
+  font-size: 20px;
+  position: absolute;
+  left: 260px;
+}
+
+.minesPlasP9 {
+  cursor: pointer;
+  margin: 10px 10px;
+}
+
+.area {
+  width: 30px;
+  height: 30px;
+}
+
+.PageDeletP9Back {
+  background-color: #575557;
+  opacity: 0.2;
+  z-index: 5;
+  position: absolute;
+  inset: 0;
+}
+
+.PageDeletP9 {
+  position: absolute;
+  z-index: 10;
+  bottom: -450px;
+  /* height: 800px; */
+}
+
+.comeUp {
+  animation: animatetop 2s forwards;
+}
+
+@keyframes animatetop {
+  from {
+    bottom: -450px;
+  }
+  to {
+    bottom: 5px;
+  }
+}
+
+.comeDowen {
+  animation: animatedown 2s forwards;
+}
+
+@keyframes animatedown {
+  from {
+    bottom: 5px;
+  }
+  to {
+    bottom: -450px;
+  }
+}
+
+.divRemoveCartP9 {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  padding: 40px 20px 30px;
+  background-color: rgb(250, 250, 250);
+  height: 550px;
+  width: 425px;
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+}
+
+.RemoveCartP9 {
+  font-weight: 700;
+  font-size: 32px;
+  margin-left: 40px;
+}
+
+.AnRemoveOrder {
+  margin: 70px 0px 40px 0px;
+}
+
+.CancelP9 {
+  /* background-color: #e7e6e7; */
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 30px;
+  margin: 10px 5px;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.CancelP9:hover {
+  background-color: rgb(47, 44, 49);
+  color: aliceblue;
+}
+
+.positionFix {
+  position: fixed;
+  z-index: 1;
+  backdrop-filter: blur(30px);
+}
+
+.EmptyOrderP9 {
+  background-color: white;
+  padding: 15px;
+  height: 675px;
+  border-radius: 15px;
+}
+
+.divImageEmptyOrder {
+  text-align: center;
+  font-size: 18px;
+}
+
+.headEmptyMassageP9 {
+  font-weight: 900;
+  text-align: center;
+  font-size: 20px;
+  margin: 45px 0px 15px;
+}
+
+/*************************************page 10 ******************/
+
+.headP10 {
+  padding: 12px;
+}
+
+.subjectP10 {
+  font-weight: 900;
+  font-size: 25px;
+  margin-right: 155px;
+}
+
+.ShippingString {
+  font-weight: 800;
+  font-size: 22px;
+  padding: 0px 10px;
+  margin: 10px 0px 0px;
+}
+
+.ImageLocationP10 {
+  flex: 1;
+  height: 70px;
+  padding: 5px;
+  border-radius: 60px;
+}
+
+.discriptionAddres {
+  flex: 5;
+  margin-top: 10px;
+  margin-right: 10px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 79px;
+  padding-bottom: 0;
+}
+
+.discriptionAddres::-webkit-scrollbar {
+  width: 0;
+}
+
+.DivShipping {
+  display: flex;
+  border-radius: 15px;
+  background-color: rgb(250, 250, 250);
+  padding: 0px 15px 10px;
+  margin: 20px 15px 40px;
+}
+
+.ImageEditP10 {
+  flex: 1;
+  height: 30px;
+  border-radius: 60px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.divAdress {
+  font-weight: 500;
+  font-size: 15px;
+  margin-left: 15px;
+}
+
+.orderList {
+  margin: 0px 15px;
+  padding: 15px;
+}
+
+.divQuantityP10 {
+  background-color: #d1e5eb;
+  border-radius: 25px;
+  padding: 3px 15px;
+  font-weight: 600;
+  font-size: 20px;
+  position: absolute;
+  left: 300px;
+}
+
+.ImageshippingP10 {
+  flex: 1;
+  height: 50px;
+  padding: 5px;
+}
+
+.Cho-Ship-Character {
+  flex: 6;
+  font-weight: 600;
+  font-size: 19px;
+  margin: 20px 0px 0px 15px;
+}
+
+.PlusPromo {
+  border-radius: 35px;
+  background-color: #0b0c0e;
+  padding: 6px 20px;
+  color: #ffffff;
+  font-size: 29px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.inputPromo {
+  border: none;
+  border-radius: 15px;
+  width: 300px;
+}
+
+.DivPromo {
+  display: flex;
+  border-radius: 15px;
+  background-color: rgb(250, 250, 250);
+  padding: 10px 15px;
+  margin: 20px 15px 40px;
+}
+
+.DivFactor {
+  border-radius: 15px;
+  background-color: rgb(250, 250, 250);
+  padding: 10px 15px;
+  margin: 20px 15px 40px;
+  font-weight: 600;
+  font-size: 19px;
+}
+
+.AmountFactor {
+  margin-right: 200px;
+}
+
+.totalShipping {
+  border-bottom: 1px solid rgb(177, 172, 172);
+  margin: 20px 0px;
+  padding-bottom: 20px;
+}
+
+.MainP10 {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  white-space: nowrap;
+  height: 720px;
+}
+
+.MainP10::-webkit-scrollbar {
+  width: 0;
+}
+
+.ButtonCountinuoPay {
+  margin: 20px 15px 20px;
+  width: 390px;
+  height: 70px;
+  border-radius: 45px;
+  background-color: #000000;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/**********************************Page 11 ***************/
+
+.subjectP11 {
+  font-weight: 900;
+  font-size: 25px;
+}
+
+.ButtonAddNewAddress {
+  border: none;
+  background-color: #7e7a7a;
+}
+
+/**********************************Page 12 ***************/
+
+.ImageExpresP11 {
+  flex: 1;
+  height: 70px;
+  padding: 15px;
+  background-color: #000000;
+  border-radius: 40px;
+}
+
+.DivShippingMain {
+  display: flex;
+  border-radius: 15px;
+  background-color: rgb(250, 250, 250);
+  padding: 10px 15px;
+  margin: 20px 15px;
+}
+
+.discriptionShipping {
+  flex: 3;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.priceShipping {
+  flex: 1;
+  font-weight: 600;
+  font-size: 25px;
+  margin-top: 17px;
+}
+
+/********************************Page 13*****************/
+
+.SubjectP11 {
+  flex: 6;
+  font-weight: 900;
+  font-size: 25px;
+  text-align: left;
+}
+
+.PlusIcon {
+  flex: 1;
+  font-weight: 900;
+  font-size: 25px;
+  text-align: right;
+}
+
+.SelectPayment {
+  margin: 20px 15px 20px;
+}
+
+.ImageWalletP13 {
+  flex: 1;
+}
+
+.MyWalletCharacter {
+  flex: 2;
+  font-weight: 700;
+  font-size: 19px;
+  margin-right: 65px;
+  margin-top: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.priceWallet {
+  flex: 1;
+  font-weight: 600;
+  font-size: 19px;
+  margin-top: 5px;
+}
+
+.inputRedioPay {
+  flex: 1;
+  height: 30px;
+  border-radius: 60px;
+  margin-top: 4px;
+  cursor: pointer;
+  text-align: right;
+}
+
+.DivPaymentP13 {
+  display: flex;
+  border-radius: 15px;
+  background-color: rgb(250, 250, 250);
+  padding: 25px 15px;
+  margin: 20px 15px;
+}
+
+.PayPalCharacter {
+  flex: 3;
+  font-weight: 700;
+  font-size: 19px;
+  margin-right: 65px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.DivConfirm {
+  margin-top: 150px;
+}
+
+.imageSuccess {
+  width: 220px;
+  border-radius: 40px;
+}
+
+.divImageSuccess {
+  text-align: center;
+  padding: 20px 15px;
+}
+
+.SuccessfullCharacter {
+  text-align: center;
+  font-weight: 900;
+  font-size: 26px;
+  margin-top: 20px;
+}
+
+.MadeOrderCharacter {
+  text-align: center;
+  margin-top: 20px;
+  /* font-size: 18px; */
+}
+
+.ButtonViweOrder {
+  font-size: 16px;
+  font-weight: 600;
+  width: 180px;
+  height: 40px;
+  border-radius: 45px;
+  background-color: #d8d2d2;
+  cursor: pointer;
+}
+
+.ButtonViweOrder:hover {
+  background-color: #212529;
+  color: #ffffff;
+}
+
+.sectionSuccess {
+  background-color: white;
+  margin: 150px 70px 50px;
+  border-radius: 50px;
+  padding: 15px 15px 35px;
+  position: absolute;
+  z-index: 10;
+  opacity: 0.1;
+  transition: opacity 2s;
+}
+
+.opacity {
+  opacity: 1;
+}
+
+/**********************************page 14 ***************/
+
+.divHeadLeft {
+  flex: 1;
+  text-align: right;
+}
+
+.subjectP14 {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 39px;
+  color: #152536;
+  padding: 0px 10px;
+}
+
+.mainSectionP14 {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  white-space: nowrap;
+  height: 690px;
+  padding-bottom: 0px;
+  display: flex;
+}
+
+.mainSectionP14::-webkit-scrollbar {
+  width: 0;
+}
+
+.ActiveAndMyOrders {
+  display: flex;
+  margin: 0px 20px;
+  border-bottom: 1px solid #c2bebe;
+}
+
+.Active {
+  flex: 1;
+  font-weight: 700;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+  padding: 0px 0px 15px;
+}
+
+/* .Active:hover {
+  border-bottom: 5px solid #363434;
+} */
+
+.borderButtem {
+  border-bottom: 5px solid #363434;
+}
+
+/********************************page 14 ********************/
+
+.OneOrderP14 {
+  display: flex;
+  margin: 20px 15px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 20px;
+  width: 390px;
+}
+
+.imageOneOrderP14 {
+  width: 130px;
+  height: 130px;
+  border-radius: 20px;
+}
+
+.divDiscripeOrderP14 {
+  flex: 3;
+  padding-left: 10px;
+}
+
+.typeShoseP14 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.colorSignP14 {
+  padding: 1px 10px;
+  border-radius: 25px;
+  margin-right: 5px;
+}
+
+.colerSizeP14 {
+  margin-top: 2px;
+  font-size: 15px;
+}
+
+.inDeliveryP14 {
+  font-size: 12px;
+  background-color: #d1e5eb;
+  border-radius: 5px;
+  /* width: 70px; */
+  padding: 1px 10px;
+  margin: 7px 0px;
+}
+
+.PriceOrderP14 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.TrackOrderP14 {
+  background-color: #000000;
+  color: #d8d2d2;
+  border-radius: 25px;
+  padding: 5px 10px;
+  margin-left: 30px;
+  font-weight: 700;
+  font-size: 15px;
+}
